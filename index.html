@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blue Door Dungeon offers a premium BDSM experience in a safe, private setting. Book your session today." />
+  <title>Blue Door Dungeon</title>
+  <link rel="stylesheet" href="style.css" />
+    <!-- Add your CSS here -->
+    <style>
+      /* Initially hide all toggle sections */
+      .toggle-section {
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 1s ease-in-out;
+      }
+
+      /* Make visible sections fade in */
+      .toggle-section.visible {
+          opacity: 1;
+          visibility: visible;
+          transition: opacity 1s ease-in-out;
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/background.jpg" alt="Blue Door Dungeon Logo" class="logo-img" />
+        <span>Blue Door Dungeon</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="equipment.html">Equipment</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="booking.html">Book Online</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero fade-in">
+      <div class="hero-text">
+        <h1>Welcome to Blue Door Dungeon</h1>
+        <p>A private BDSM space for exploration and connection.</p>
+        <a href="booking.html" class="cta-button pulse">Book a Session</a>
+      </div>
+      <div class="hero-image">
+        <div class="overlay"></div>
+        <picture>
+          <source srcset="images/background.webp" type="image/webp" />
+          <img src="images/background.jpg" alt="Private BDSM room preview" />
+        </picture>
+      </div>
+    </section>
+    
+    <section class="intro fade" id="philosophySection">
+      <h2>Our Philosophy</h2>
+  
+      <p>
+          <em>Blue Door Dungeon</em> is a refined, discreet sanctuary where authenticity meets artistry. Here, every whisper of leather, every shimmer of chain, and every breathless moment is held in sacred trust.
+      </p>
+  
+      <p>
+          We’re not just a dungeon—we’re a destination for radical self-expression and sensual exploration. From your first step inside, you're wrapped in warmth, elegance, and a quiet intensity that invites you to go deeper.
+      </p>
+  
+      <h3>🖤 Our Core Principles</h3>
+      <ol>
+          <li><strong>Consent Is Sacred:</strong> A continuous, enthusiastic agreement—voiced, revisited, and respected.</li>
+          <li><strong>Safety Is Non-Negotiable:</strong> Every toy inspected. Every scene supported. Every guest watched over with care.</li>
+          <li><strong>Respect & Equality Above All:</strong> Roles are chosen; worth is inherent. Every guest is seen, heard, and honored.</li>
+          <li><strong>Judgment-Free Exploration:</strong> No kink is “too much” when grounded in consent. This is your playground of truth.</li>
+          <li><strong>Professionalism With Passion:</strong> Our team is trauma-informed, highly skilled, and deeply devoted to your experience.</li>
+          <li><strong>Community & Connection:</strong> Events, mentorship, and mingling—no one journeys alone here.</li>
+          <li><strong>Inclusive Sanctuary:</strong> Genderless. Label-less. Limitless. This space celebrates every identity, orientation, and desire.</li>
+      </ol>
+  
+      <!-- Image placement -->
+      <div class="image-section">
+          <img src="images/seperation.jpg" alt="Image description" class="philosophy-image">
+      </div>
+  
+      <h3>🌟 What Sets Us Apart</h3>
+      <ul>
+          <li><strong>Curated Ambience:</strong> Candle-lit chambers, soundproofed elegance, and sensory-enhanced lighting that responds to mood and music.</li>
+          <li><strong>Welcome Ritual:</strong> First-time guests receive a personalized tour and grounding ritual to ease nerves and deepen presence.</li>
+          <li><strong>Post-Scene Aftercare Lounge:</strong> A velvet-lined retreat with herbal teas, soft music, plush throws, and optional peer debriefing.</li>
+          <li><strong>Wardrobe & Props Library:</strong> From latex to lace—express yourself freely with access to premium roleplay attire and tools.</li>
+          <li><strong>Consent Tokens:</strong> Beautifully designed physical tokens to aid in non-verbal communication and check-ins during play.</li>
+          <li><strong>Themed Nights & Immersive Events:</strong> From masked balls to sensory deprivation theaters—fantasy thrives here.</li>
+      </ul>
+  
+      <p class="final-invite">
+          Whether you're here for catharsis, curiosity, healing, or hedonism—there’s space for you. Blue Door Dungeon is where transformation takes form.
+      </p>
+      <p class="final-invite">
+          You won’t just remember what you did here. You’ll remember how you felt—seen, safe, sovereign.
+      </p>
+  </section>
+  
+  
+    
+    
+    <button class="reveal-btn" onclick="revealPhilosophy()">Reveal the Experience</button>
+    
+    
+
+    <section class="features">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Exclusive, private rooms</li>
+        <li>High-quality BDSM equipment</li>
+        <li>Discreet and professional service</li>
+      </ul>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <h3>Jake</h3>
+          <p>"Yo, this place was insane. Everything was so clean, the vibe was on point, and the staff made sure I was comfortable the whole time. Definitely coming back for more playtime!"</p>
+        </div>
+
+        <div class="testimonial">
+          <h3>Sophia</h3>
+          <p>"Hands down, the best dungeon experience I’ve had. The equipment was top-notch, and the energy in the place was exactly what I needed. Super chill, super fun, and the staff really knows what they’re doing."</p>
+        </div>
+
+        <div class="testimonial">
+          <h3>Dylan</h3>
+          <p>"Had an awesome time. I was nervous at first, but the staff walked me through everything. The space was so welcoming, and it felt like I could really let go. Can’t wait to go again!"</p>
+        </div>
+
+        <div class="testimonial">
+          <h3>Lena</h3>
+          <p>"This dungeon is chef’s kiss. The vibe is just right—dark, mysterious, but not intimidating. The people there are super professional, and I felt safe the whole time. 10/10 would recommend."</p>
+        </div>
+
+        <div class="testimonial">
+          <h3>Marcus</h3>
+          <p>"Such a blast! The equipment is all in perfect condition, and it’s nice that they have so many options. Definitely felt like I could explore my limits in a safe, fun environment. Definitely going back soon!"</p>
+        </div>
+
+        <div class="testimonial">
+          <h3>Kara</h3>
+          <p>"Best experience ever! The space was exactly what I was looking for—private, clean, and with all the right tools for a crazy night. If you’re into BDSM, this place is a must!"</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Blue Door Dungeon.</p> 
+    <p>All rights reserved.</p>
+    <p><a href="mailto:bluedoorlodge@outlook.com">Email Us</a></p>
+  </footer>
+  
+  <script src="script.js"></script> <!-- Include external JS file -->
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rooms - Blue Door Dungeon</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Enhanced Internal Styling for Room Descriptions -->
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      font-weight: normal;
+      font-style: normal;
+      margin: 0;
+      padding: 0;
+      background: #141313;
+      color: #cba6a6;
+    }
+
+    .rooms {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .rooms h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .room-item {
+      display: flex;
+      flex-wrap: wrap;
+      background: #454242;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .room-image {
+      flex: 1 1 300px;
+      min-width: 300px;
+      max-width: 400px;
+    }
+
+    .room-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .room-description {
+      flex: 2;
+      padding: 1.2rem 1.5rem;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .room-description h3 {
+      font-size: 1.25rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .room-description p {
+      margin: 0;
+      text-align: justify;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 0.875rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: #000;
+      color: #fff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Blue Door Dungeon</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="equipment.html">Equipment</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="booking.html">Book Online</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="rooms">
+      <h2>Our Signature Rooms</h2>
+      <p>Step into distinct fantasy spaces, each tailored to heighten your desires and push your boundaries.</p>
+
+      <div class="room-item">
+        <div class="room-image">
+          <img src="images/IMG_0421.jpeg" alt="The Void" />
+        </div>
+        <div class="room-description">
+          <h3>The Void</h3>
+          <p>Step into a quiet, thoughtfully designed space where the noise of the outside world gently falls away. This room isn't about darkness—it's about presence. Outfitted with high-grade sound isolation, minimal yet purposeful lighting, and precision-crafted suspension rigging, every element serves a singular purpose: to create an environment where time slows and the senses come alive. It's not cold, but calm. Not empty, but open. Here, comfort and control exist side by side, inviting you to let go of distraction and step fully into experience. Whether you're here for stillness, sensation, or something in between, this space holds it—with intention, and without judgment.</p>
+        </div>
+      </div>
+
+      <div class="room-item">
+        <div class="room-image">
+          <img src="images/9fa3a8ef-5e31-44ab-b903-7c18496854a5.png" alt="The Sanitarium" />
+        </div>
+        <div class="room-description">
+          <h3>The Sanitarium</h3>
+          <p>Welcome to a room where refinement meets reverie. Every detail has been curated for comfort, intimacy, and indulgence—from the whisper-soft acoustics that hush the world outside to the ambient lighting that glows like candlelight on silk. The space is fitted with custom suspension rigging, plush surfaces, and rich textures that invite touch and presence. Walls seem to breathe with warmth, wrapped in sound-absorbing materials that cocoon you in calm.</p>
+        </div>
+      </div>
+
+      <div class="room-item">
+        <div class="room-image">
+          <img src="images/photo_2_2025-05-06_11-37-00.jpg" alt="The Chapel" />
+        </div>
+        <div class="room-description">
+          <h3>The Chapel</h3>
+          <p>This is a space that doesn’t just welcome you—it adapts to you. Designed with flexibility in mind, this room is a blank canvas for your comfort, creativity, and curiosity. Whether you prefer warm, ambient lighting or a crisp, focused glow, the mood is yours to set. Adjustable suspension points, modular furnishings, and discreet tech integrations allow the room to transform effortlessly—whether you're seeking stillness, movement, intimacy, or exploration. The materials are high-end, the feel is elevated, but the true luxury lies in choice. Here, control isn’t just about buttons or settings—it’s about having a space that mirrors your mood, your rhythm, and your desires. It’s not just made for you. It’s made with you.</p>
+        </div>
+      </div>
+
+      <div class="room-item">
+        <div class="room-image">
+          <img src="images/Rooms-Smaller-2-1-2048x1830.jpg" alt="The Parlor" />
+        </div>
+        <div class="room-description">
+          <h3>The Parlor</h3>
+          <p>Tucked away behind velvet-draped walls, this room is a sensual escape made for lingering glances, lazy laughter, and indulgent mischief. Plush seating wraps around you like a whisper, with rich textures—leather, velvet, silk—inviting exploration at every turn. The lighting is soft and golden, designed to flatter and entice, while hidden controls let you shift the mood from sultry to playful with a touch. A well-stocked bar gleams in the corner, and every inch of the space is crafted for comfort, chemistry, and connection. Whether you're unwinding in silence or teasing the edge of temptation, this isn't just a room—it's a mood. Decadent, discreet, and just a little bit dangerous in all the right ways.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blue Door Dungeon.</p>
+    <p>All rights reserved.</p>
+    <p><a href="mailto:bluedoorlodge@outlook.com">Email Us</a></p>
+  </footer>
+</body>
+</html>
