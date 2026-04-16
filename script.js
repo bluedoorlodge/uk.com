@@ -1,79 +1,89 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Existing functionality for testimonials
-  let testimonials = document.querySelectorAll('.testimonial');
-  let currentTestimonialIndex = 0;
 
-  function changeTestimonial() {
-    // Hide the current testimonial
-    testimonials[currentTestimonialIndex].classList.remove('active');
+/* ==============================
+   TESTIMONIAL ROTATION (FINAL)
+============================== */
+const testimonials = document.querySelectorAll('.testimonial');
 
-    // Increment to show the next testimonial
-    currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+if (testimonials.length > 0) {
+  let index = 0;
 
-    // Show the next testimonial
-    testimonials[currentTestimonialIndex].classList.add('active');
-  }
+  // force clean start
+  testimonials.forEach(t => t.classList.remove('active'));
+  testimonials[0].classList.add('active');
 
-  // Initially show the first testimonial
-  testimonials[currentTestimonialIndex].classList.add('active');
+  setInterval(() => {
+    testimonials[index].classList.remove('active');
 
-  // Change testimonial every 5 seconds
-  setInterval(changeTestimonial, 5000);
+    index = (index + 1) % testimonials.length;
 
-  // New functionality for toggling sections with fading effect (What Sets Us Apart and Our Core Principles)
+    testimonials[index].classList.add('active');
+
+  }, 5000);
+}
+
+  /* ==============================
+     TOGGLE SECTIONS (FADE)
+  ============================== */
+  const sections = document.querySelectorAll('.toggle-section');
   let currentIndex = 0;
-  const sections = document.querySelectorAll('.toggle-section'); // Make sure both sections have this class
 
-  // Function to toggle sections
-  function toggleSections() {
-    // Hide the current section with fade-out
-    sections[currentIndex].classList.remove('visible');
-    
-    // Update index to the next section in a circular fashion
-    currentIndex = (currentIndex + 1) % sections.length;
-
-    // Show the next section with fade-in
+  if (sections.length > 0) {
     sections[currentIndex].classList.add('visible');
+
+    setInterval(() => {
+      sections[currentIndex].classList.remove('visible');
+      currentIndex = (currentIndex + 1) % sections.length;
+      sections[currentIndex].classList.add('visible');
+    }, 5000);
   }
 
-  // Initially show the first section
-  sections[0].classList.add('visible');
+  /* ==============================
+     IMAGE ROTATION (EQUIPMENT)
+  ============================== */
+  const images = [
+    'images/image1.jpg',
+    'images/image2.jpg',
+    'images/image3.jpg',
+    'images/image4.jpg'
+  ];
 
-  // Call toggleSections every 5 seconds (change as per your preference)
-  setInterval(toggleSections, 5000);
+  let imageIndex = 0;
+  const imgElement = document.getElementById('equipment-img');
+
+  if (imgElement) {
+    setInterval(() => {
+      imageIndex = (imageIndex + 1) % images.length;
+      imgElement.src = images[imageIndex];
+    }, 4000);
+  }
 
 });
 
+
+/* ==============================
+   PHILOSOPHY REVEAL (CLICK)
+============================== */
 function revealPhilosophy() {
   const section = document.getElementById('philosophySection');
-  section.classList.add('show');
-  section.scrollIntoView({ behavior: 'smooth' });
+  if (section) {
+    section.classList.add('show');
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
+
+/* ==============================
+   SCROLL REVEAL
+============================== */
 window.addEventListener('scroll', () => {
   const section = document.getElementById('philosophySection');
+  
+  if (!section) return;
+
   const rect = section.getBoundingClientRect();
+
   if (rect.top <= window.innerHeight * 0.75) {
     section.classList.add('show');
   }
 });
-
-const images = [
-  'images/image1.jpg',
-  'images/image2.jpg',
-  'images/image3.jpg',
-  'images/image4.jpg' // Total 4 images
-];
-
-let index = 0; // To track the current image
-
-function rotateImage() {
-  const imgElement = document.getElementById('equipment-img');
-  
-  // Rotate to the next image, wrapping around at the end of the array
-  index = (index + 1) % images.length;
-  imgElement.src = images[index]; // Update image source
-}
-
-// Change the image every 4 seconds (4000 milliseconds)
-setInterval(rotateImage, 4000);
